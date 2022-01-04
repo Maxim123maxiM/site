@@ -1,0 +1,22 @@
+RewriteEngine On
+
+RewriteBase /autoredirectmaster
+
+
+RewriteRule ^css/(.*\.css) css/$1 [L,QSA]
+
+RewriteRule ^images/(.*) images/$1 [L,QSA]
+
+RewriteRule ^js/(.*) js/$1 [L,QSA]
+
+RewriteRule ^install(.*) install$1 [L,QSA]
+
+RewriteRule ^favicon.ico favicon.ico [L,QSA]
+
+RewriteRule ^arm.csv arm.csv [L,QSA]
+
+RewriteRule ^index.php(.*) index.php$1 [L,QSA]
+
+RewriteRule ^$ index.php [L,QSA]
+
+RewriteRule ^(.*) redirect.php?l=$1 [L,QSA]
